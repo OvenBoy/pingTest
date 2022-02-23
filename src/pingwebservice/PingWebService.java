@@ -6,6 +6,7 @@
 package pingwebservice;
 import java.io.*;
 import java.util.*;
+import javax.swing.*;
 
 /**
  *
@@ -17,22 +18,10 @@ public class PingWebService {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Scanner kb = new Scanner(System.in);
-        
-        System.out.println("Enter address to be pinged: ");
-        String ping = kb.nextLine();
-        
+        String ping = JOptionPane.showInputDialog("Please input a server"); //could check if string "google" has no ".com" then add
         
         PingCommand.ping(ping);
-        
-        
-        
-        
-        
-        
-        // Ping web service
-        // Retrieve response
-        // Interpurt the response
+       
     }
     
 }
